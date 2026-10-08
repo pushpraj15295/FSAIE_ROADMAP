@@ -75,3 +75,13 @@ l7 = [8, 5, 7, 5, 8, 89, 4]
 l7.sort()
 print("srt", l7)
 print("in", l7.index(7))
+
+
+# remove dublicate number 
+ex = [1,1,2,2,7,2,3,4,5,6,6]
+new_l = []
+for i in ex:
+    if i not in new_l:
+        new_l.append(i)
+
+print("nl",new_l)   
