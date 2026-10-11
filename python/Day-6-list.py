@@ -1,4 +1,4 @@
-# list in python and it's hectrogenous [you can add diffrent data type]
+# list in python and it's hectrogenous [you can add diffrent data type] [array]
 # list are mutable
 
 # create --------------------
