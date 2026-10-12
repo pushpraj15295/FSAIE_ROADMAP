@@ -67,3 +67,15 @@ def add_dict(**kwargs):
 
 print(add_dict(a=10, b=20, c=30))           
 
+
+# benefits of function
+# 1. code reusability
+# 2. code readability
+# 3. code maintainability
+# 4. code testability
+# 5. code debugging
+# 6. code optimization
+# 7. code security
+# 8. code performance
+# 9. code scalability
+# 10. code portability  
