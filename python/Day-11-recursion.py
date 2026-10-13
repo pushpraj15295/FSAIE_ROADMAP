@@ -41,3 +41,18 @@ print(fibonacci(5))
 # 5
 # 5 + 3
 # 8
+
+
+# example 3: palindrome ------------------------------------------------------------
+def palindrome(s):
+    if len(s) <= 1:
+        return True
+    else:
+        return s[0] == s[-1] and palindrome(s[1:-1])
+
+print(palindrome("racecar"))    # True
+
+# racecar   
+# r == r
+# a == a   
+
