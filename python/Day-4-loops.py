@@ -35,3 +35,13 @@ for i in range(1, 6):
 
 
         
+# new way to use loops 
+l1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# duble the value of each element in the l1
+l2 = [i * 2 for i in l1]
+print(l2)   
+
+
+# or even more advanced way to use loops with if statement
+l3 = [i * 2 for i in l1 if i % 2 == 0]
+print(l3)   
