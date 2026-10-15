@@ -27,3 +27,25 @@
 # what is oops ? that need understand first before understanding oops
 # ans: oops is a programming paradigm that allows a class to encapsulate its properties and methods
 
+
+# class besic structure ------------------------------------------------
+
+class Dog:
+    name = "Buddy"
+    age = 3
+    breed = "Labrador"
+    color = "Brown"
+    gender = "Male"
+    owner = "John"
+    owner_age = 30
+    owner_gender = "Male"
+    owner_email = "john@example.com"
+    owner_phone = "1234567890"
+    def bark(self):
+        print(f"{self.name} is barking")
+
+dog1 = Dog()
+print(dog1.name)
+print(dog1.bark())
+
+
