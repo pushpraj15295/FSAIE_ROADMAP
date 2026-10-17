@@ -11,9 +11,10 @@
 class ATM:
 
     def __init__(self):      #init is a constructor that is used to initialize the object [magic method]
-        self.pin = 1234     # self 
+        self.pin = 1234     # self is a reference to the current object
         self.balance = 0
         self.menu()
+        print(id(self))
 
     def menu(self):
         user_input = input("""
@@ -67,7 +68,10 @@ class ATM:
 
 Sbi_atm = ATM()
 
+print(id(Sbi_atm))  #id of self and sbi_atm are the same because they are the same object
+
 # or we can create multiple objects of the same class
 kotak_atm = ATM()
 
+print(id(kotak_atm))  #id of kotak_atm is different from the id of sbi_atm because they are different objects
 
