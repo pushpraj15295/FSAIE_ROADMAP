@@ -29,6 +29,9 @@
 
 
 # class besic structure ------------------------------------------------
+# use pascal case for class name
+# variable name use snake_case
+# function name use snake_case  
 
 class Dog:
     name = "Buddy"
@@ -47,6 +50,9 @@ class Dog:
 dog1 = Dog()
 print(dog1.name)
 print(dog1.bark())
+
+
+
 
 
 
