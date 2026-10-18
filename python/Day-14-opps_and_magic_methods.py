@@ -3,8 +3,12 @@
 
 class Frection:
     def __init__(self, numerator, demoninator):
+        # instance variables are the variables that are defined inside the instance of the class
+        #  we can make private using __ before the variable name
         self.num = numerator
+        # or self.__num =numerator
         self.den = demoninator
+        # or self.__den = demoninator --- to make it private
 
     def __str__(self):
         return f"{self.num}/{self.den}"
