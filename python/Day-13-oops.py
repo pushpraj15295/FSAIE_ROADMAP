@@ -53,6 +53,26 @@ print(dog1.bark())
 
 
 
+# class objesct are also mutable like list, dictionary, set etc.
+class Customer:
+    def __init__(self,name):
+        self.name = name 
+
+# function 
+def greet(customer):
+    print(id(customer))
+    customer.name = "John" # this is mutable from inside the function
+    print(id(customer))
+    print(customer.name)
+
+
+customer1 = Customer("Raj")
+greet(customer1)
+print(id(customer1))
+
+print(customer1.name)
+
+
 
 
 
