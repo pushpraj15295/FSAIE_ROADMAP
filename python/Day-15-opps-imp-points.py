@@ -33,3 +33,25 @@ for customer in customers:
     print(customer.name)
 
 # collections of objects are also mutable like list, dictionary, set etc.
+
+
+# static counter ------------------------------------------------------------
+
+class Counter:
+    count = 0 
+    def __init__(self):
+        Counter.count += 1
+    # @staticmethod # static method is a method that is not bound to any instance of the class
+    def get_count():
+        return Counter.count
+
+counter1 = Counter()
+print(Counter.get_count()) # 1
+counter2 = Counter()
+print(Counter.get_count()) # 2
+counter3 = Counter()
+print(Counter.get_count()) # 3
+
+
+# that counter is incremented for each call of the constructor by +1
+
