@@ -125,6 +125,33 @@ print(teacher.teach())
 # because student is-a User and teacher is-a User
 
 
+# example:2. Inheritance relationship (is-a relationship) -----------------------------------
+
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+    def drive(self):
+        return "Driving the car"
+    
+class SportsCar(Car):
+    def __init__(self, brand, model, year, speed):
+        super().drive()
+        self.speed = speed
+
+    def accelerate(self):
+        return "Accelerating the sports car"
+        
+    def brake(self):
+        return "Braking the sports car"
+
+car = Car("Toyota", "Corolla", "2020")
+print(car.drive())
+sports_car = SportsCar("Ferrari", "488", "2021", "300")
+print(sports_car.drive())
+print(sports_car.accelerate())
+print(sports_car.brake())
 
 
 
