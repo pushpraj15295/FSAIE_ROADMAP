@@ -174,3 +174,17 @@ print("Cost of milk: Rs.", cost)
 
 
 # ------------------------------------------------------------------------------------------------------------------------------------------
+
+# Write  a program that will tell whether the given number is divisible by 3 & 6.
+
+num = int(input("enter Number"))
+
+def is_divisible_by_3_and_6(num):
+ if num % 3 == 0 and num % 6 == 0:
+  print("Number is divisible by 3 & 6")
+ else: print("Number is not divisible by 3 & 6")
+
+is_divisible_by_3_and_6(num)
+
+# ------------------------------------------------------------------------------------------------------------------------------------------
+
