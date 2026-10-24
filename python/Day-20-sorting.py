@@ -233,12 +233,32 @@ print("shell sort",shell_sort([3, 2, 1, 4, 5]))
 # 13. tree sort [O(n log n)]------------------------------------------------------------
 # tree sort is a sorting technique that sorts the elements by building a binary search tree and then traversing the tree in order.
 
-def tree_sort(l):
-    tree = build_tree(l)
-    return traverse_tree(tree)
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
 
-print("tree sort",tree_sort([3, 2, 1, 4, 5]))
 
+def insert(root, value):
+    if root is None:
+        return Node(value)
+
+    if value < root.value:
+        root.left = insert(root.left, value)
+    else:
+        root.right = insert(root.right, value)
+
+    return root
+
+
+def build_tree(l):
+    root = None
+
+    for value in l:
+        root = insert(root, value)
+
+    return root
 
 # 14. pigeonhole sort [O(n log n)]------------------------------------------------------------  
 # pigeonhole sort is a sorting technique that sorts the elements by first dividing the elements into several groups called pigeonholes.
@@ -339,13 +359,47 @@ print("stooge sort",stooge_sort([3, 2, 1, 4, 5]))
 # bitonic sort is a sorting algorithm that works by repeatedly sorting the list in a bitonic manner.
 
 def bitonic_sort(l):
-    if len(l) <= 1:
+    n = len(l)
+
+    if n <= 1:
         return l
-    mid = len(l) // 2
-    left = bitonic_sort(l[:mid])
-    right = bitonic_sort(l[mid:])
-    return merge(left, right)
-print("bitonic sort",bitonic_sort([3, 2, 1, 4, 5]))
+
+    # Pad to the next power of 2
+    size = 1
+    while size < n:
+        size *= 2
+
+    arr = l + [float("inf")] * (size - n)
+
+    def bitonic_merge(arr, low, count, ascending):
+        if count > 1:
+            half = count // 2
+
+            for i in range(low, low + half):
+                j = i + half
+
+                if (arr[i] > arr[j]) == ascending:
+                    arr[i], arr[j] = arr[j], arr[i]
+
+            bitonic_merge(arr, low, half, ascending)
+            bitonic_merge(arr, low + half, half, ascending)
+
+    def sort(arr, low, count, ascending):
+        if count > 1:
+            half = count // 2
+
+            # First half ascending, second half descending
+            sort(arr, low, half, True)
+            sort(arr, low + half, half, False)
+
+            bitonic_merge(arr, low, count, ascending)
+
+    sort(arr, 0, size, True)
+
+    return arr[:n]
+
+
+print("Bitonic sort:", bitonic_sort([3, 2, 1, 4, 5]))
 
 
 # 21. pigeonhole sort [O(n log n)]------------------------------------------------------------   
