@@ -52,7 +52,17 @@ print(dog1.name)
 print(dog1.bark())
 
 
+# what is custom object ? that need understand first before understanding oops
+# ans: custom object is a object that is created by the user to represent a real world entity.
+# example: Dog, Cat, Bird, Fish, etc.
 
+# what is standard object ? that need understand first before understanding oops
+# ans: standard object is a object that is created by the python interpreter to represent a real world entity.
+# example: int, float, str, bool, list, tuple, dict, set, etc.
+
+# what is built-in object ? that need understand first before understanding oops
+# ans: built-in object is a object that is created by the python interpreter to represent a real world entity.  
+# example: print, input, len, type, etc.
 
 
 

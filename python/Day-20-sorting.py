@@ -176,11 +176,33 @@ print("Heap sort:", heap_sort([3, 2, 1, 4, 5]))
 # radix sort is a non-comparative integer sorting algorithm 
 # that sorts data with integer keys by grouping keys by the individual digits which share the same significant position and value.
 
+def counting_sort_by_digit(l, exp):
+    n = len(l)
+    output = [0] * n
+    count = [0] * 10
+
+    for num in l:
+        digit = (num // exp) % 10
+        count[digit] += 1
+
+    for i in range(1, 10):
+        count[i] += count[i - 1]
+
+    # Walk backward so equal digits keep their order
+    for i in range(n - 1, -1, -1):
+        digit = (l[i] // exp) % 10
+        count[digit] -= 1
+        output[count[digit]] = l[i]
+
+    for i in range(n):
+        l[i] = output[i]
+
+
 def radix_sort(l):
     max_num = max(l)
     exp = 1
     while max_num // exp > 0:
-        counting_sort(l, exp)
+        counting_sort_by_digit(l, exp)
         exp *= 10
     return l
 
@@ -417,5 +439,13 @@ print("pigeonhole sort",pigeonhole_sort([3, 2, 1, 4, 5]))
 
 
 
+# using key parameter in sort() method ------------------------------------------------------------
 
+def get_length(name):
+    return len(name)
 
+names = ["Pushpraj", "Amit", "Rahul", "Zoya"]
+
+result = sorted(names, key=get_length)
+
+print("using key parameter in sort() method",result)
