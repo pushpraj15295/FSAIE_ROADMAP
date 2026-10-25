@@ -26,7 +26,7 @@ I will commit my learning and projects regularly to this repository.
 Become a Full Stack AI Engineer capable of building production-ready AI applications from frontend to backend.
 
 Target Skills
-Python
+Python - In progress...
 FastAPI
 Backend Development
 REST APIs
