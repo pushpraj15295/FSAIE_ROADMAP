@@ -18,5 +18,5 @@ def subtract(a, b):
 # import calculator from calculator.py [import the module]
 # from calculator import add, subtract 
 
-print(calculator.add(1, 2))
-print(calculator.subtract(1, 2))
+# print(calculator.add(1, 2))
+# print(calculator.subtract(1, 2))
