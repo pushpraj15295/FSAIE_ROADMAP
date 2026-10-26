@@ -1,0 +1,30 @@
+{
+  "name": "Pushpraj",
+  "age": 30,
+  "skills": [
+    "Python",
+    "React",
+    "JavaScript"
+  ],
+  "is_learning_ai": true,
+  "projects": [
+    {
+      "name": "Project 1",
+      "description": "Description of Project 1",
+      "technologies": [
+        "Python",
+        "React",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Project 2",
+      "description": "Description of Project 2",
+      "technologies": [
+        "Python",
+        "React",
+        "JavaScript"
+      ]
+    }
+  ]
+}
