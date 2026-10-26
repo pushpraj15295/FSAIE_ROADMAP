@@ -20,3 +20,11 @@ def subtract(a, b):
 
 # print(calculator.add(1, 2))
 # print(calculator.subtract(1, 2))
+
+
+#  Module vs Package vs __init__.py ------------------------------------------------------------------
+
+# Module	A Python file	calculations.py
+# Package	A directory grouping modules	utils/ 
+# import	Statement to access code	import math
+# __init__.py	Package initialization and exports	utils/__init__.py [package initialization and exports]
