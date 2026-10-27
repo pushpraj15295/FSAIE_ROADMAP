@@ -129,16 +129,3 @@ class Child3(Parent):
 
 child6 = Child3("John", 20, "Male", "123 Main St")
 child6.display() # Name: John, Age: 20, Gender: Male, Address: 123 Main St    
-
-child7 = Child4("John", 20, "Male", "123 Main St")
-child7.display() # Name: John, Age: 20, Gender: Male, Address: 123 Main St    
-
-child8 = Child5("John", 20, "Male", "123 Main St")
-child8.display() # Name: John, Age: 20, Gender: Male, Address: 123 Main St    
-
-child9 = Child6("John", 20, "Male", "123 Main St")
-child9.display() # Name: John, Age: 20, Gender: Male, Address: 123 Main St    
-
-child10 = Child7("John", 20, "Male", "123 Main St")
-child10.display() # Name: John, Age: 20, Gender: Male, Address: 123 Main St    
-
