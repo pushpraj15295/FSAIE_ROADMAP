@@ -22,4 +22,25 @@ print(product.price)  # Calls the getter
 product.price = 200   # Calls the setter
 print(product.price)
 
-product.price = -50   # Raises ValueError
+try:
+    product.price = -50   # Raises ValueError
+except ValueError as error:
+    print(error)
+
+
+# Read-only property example
+# Sometimes you want to calculate a value without allowing users to assign it directly.
+
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    @property
+    def area(self):
+        return self.width * self.height
+
+
+rectangle = Rectangle(10, 5)
+
+print(rectangle.area)  # 50
