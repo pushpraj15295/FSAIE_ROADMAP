@@ -46,3 +46,56 @@ print(res.status_code)
 print(res.headers.get("Content-Type"))
 print(res.json()) # convert the response to a JSON object
 print(res.text) # convert the response to a string
+
+
+
+# What are HTTP Status Codes? -----------------------------------------------
+
+# HTTP status codes are a way for servers to tell clients whether a request was successful or not.
+# They are a 3-digit number that indicates the status of the response.
+
+# There are five main status code categories : 
+
+# 1xx: Informational - The request was received, continuing process
+# The request is still being processed or negotiated
+
+# 2xx: Success - The request was successful
+# 200 — OK
+# 201 — Created
+# 204 — No Content
+
+# 3xx: Redirection - The request was redirected
+# 301 — Moved Permanently
+# 302 — Found (temporary redirect)
+# 304 — Not Modified
+
+# 4xx: Client Error - The request was invalid
+# 400 — Bad Request
+# 401 — Unauthorized (authentication required)
+# 403 — Forbidden
+# 404 — Not Found
+# 409 — Conflict
+# 422 — Unprocessable Content
+
+
+# 5xx: Server Error - The server was not able to handle the request
+# 500 — Internal Server Error
+# 502 — Bad Gateway
+# 503 — Service Unavailable
+
+
+import requests
+
+response = requests.get(
+    "https://jsonplaceholder.typicode.com/users/1"
+)
+
+if response.status_code == 200:
+    print("User found! successfully")
+    print(response.json())
+
+elif response.status_code == 404:
+    print("User not found")
+
+else:
+    print("Something went wrong")
